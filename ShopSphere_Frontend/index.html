@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopSphere - Modern Online Shopping</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo"><i class="fa-solid fa-bag-shopping"></i> ShopSphere</a>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search products, brands and categories...">
+                <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="nav-actions">
+                <button class="icon-btn" id="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                <button class="icon-btn cart-icon" id="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Hero Banner -->
+        <section class="hero-banner">
+            <div class="hero-text">
+                <h2>Upgrade Your Shopping Experience</h2>
+                <p>Discover tech, fashion, and lifestyle essentials at unbeatable prices.</p>
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Category Filter -->
+        <section class="categories-section">
+            <h3>Categories</h3>
+            <div class="category-buttons" id="category-filters">
+                <button class="cat-btn active" data-category="all">All</button>
+                <button class="cat-btn" data-category="Electronics">Electronics</button>
+                <button class="cat-btn" data-category="Fashion">Fashion</button>
+                <button class="cat-btn" data-category="Accessories">Accessories</button>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products-section">
+            <div class="section-header">
+                <h3>Featured Products</h3>
+                <div class="sort-wrapper">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="featured">Featured</option>
+                        <option value="low-high">Price: Low to High</option>
+                        <option value="high-low">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+                <!-- Dynamic Content via JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Modal Drawer -->
+    <div class="cart-drawer-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <button class="close-btn" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Dynamic Cart Items -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-subtotal">
+                <span>Subtotal:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+    <div class="modal" id="product-modal">
+        <button class="close-btn" id="close-modal">&times;</button>
+        <div class="modal-body" id="modal-body">
+            <!-- Dynamic Details -->
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
