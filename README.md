@@ -2,7 +2,7 @@
 
 A clean, responsive, single-page e-commerce website built with vanilla HTML5, CSS3, and JavaScript.
 
-![QR code generator screenshot](screenshot.png)
+![QR code generator screenshot](ShopSphere_Frontend/screenshot.png)
 
 ## Features
 - **Product Catalog Grid**: Display items with categories and pricing.
